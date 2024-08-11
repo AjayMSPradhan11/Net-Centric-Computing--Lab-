@@ -1,0 +1,8 @@
+@model Author
+<h2>Are you sure you want to delete @Model.Name? </h2>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="/author/index" class="btn btn-primary">Cancel</a>
+</form>
